@@ -1,0 +1,34 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+
+int main ()
+{
+    char str[100], c;
+    int count=0, i, j;
+
+    cout << "Enter a string: " <<endl;
+    cin.getline(str, 100);
+
+    for (i = 0; str[i]!='\0'; i++)
+    {count++;}
+	
+    cout << "\nSize of the array: " << count << endl;
+	cout << "\nThe reversed characters in the array are: " << strrev(str) << endl;
+
+	for (i=0; i<count; i++)
+	{
+		for (j=i+1; j<count; j++){
+			if (str[i] > str[j]){
+				c = str[i];
+				str[i] = str[j];
+				str[j] = c;
+			}
+		}
+	}
+	cout << "The arranged characters in the array are: "<< str;
+
+	_getch();
+    return 0;
+}
