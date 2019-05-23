@@ -1,0 +1,40 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int a, proA[7], proB[7], proC[7];
+
+	cout << "Enter all temperature for a week for Province A." <<endl;
+	for (a = 0; a<7; a++){
+		cout << "Day " << a+1 << ": ";
+		cin >> proA[a];}
+
+
+	cout << "Enter all temperature for a week for Province B." <<endl;
+	for (a = 0; a<7; a++){
+		cout << "Day " << a+1 << ": ";
+		cin >> proB[a];}
+	
+	
+	cout << "Enter all temperature for a week for Province C." <<endl;
+	for (a = 0; a<7; a++){
+		cout << "Day " << a+1 << ": ";
+		cin >> proC[a];}
+
+
+	cout << "\n\nDISPLAYING ALL TEMPERATURES:" <<endl;
+	for (a = 0; a<7; a++){
+		cout << "Province A, Day" << a+1 << "= " << proA[a] << endl;}
+
+	for (a = 0; a<7; a++){
+		cout << "Province B, Day" << a+1 << "= " << proB[a] << endl;}
+
+	for (a = 0; a<7; a++){
+		cout << "Province C, Day" << a+1 << "= " << proC[a] << endl;}
+
+	_getch();
+	return 0;
+}
