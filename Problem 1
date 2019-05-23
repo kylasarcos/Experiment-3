@@ -1,0 +1,38 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	float num[10];
+	float sum = 0.0;
+	double ave;
+	for (int a=0; a<10; a++)
+	{
+		cout << "Enter a value for number" << a+1 << ": "<<endl;
+		cin >> num[a];
+		sum += num[a];
+	}
+
+	ave = sum/10.0;
+	cout << "\n\nThe sum of the numbers are: " << sum << endl;
+	cout << "The average of the numbers are: " << ave << endl;
+
+	for (int a=0; a<10; a++)
+	{
+		for (int b=a+1; b<10; b++){
+			if (num[a] > num[b]){
+				int c = num[a];
+				num[a] = num[b];
+				num[b] = c;
+			}
+		}
+	}
+
+	cout << "The largest integer number is: " << num[9] << endl;
+	cout << "The smallest integer number is: " << num[0] << endl;
+
+	_getch();
+	return 0;
+}
